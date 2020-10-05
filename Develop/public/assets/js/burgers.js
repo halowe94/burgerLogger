@@ -2,7 +2,7 @@
 $(function() {
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newDevoured = $(this).data("newdevour");
+      var newDevoured = $(this).data("newDevoured");
   
       var newDevourBurg = {
         devoured: newDevoured
@@ -59,3 +59,5 @@ $(function() {
     });
   });
   
+
+  //try putting burger table name in api instead of burgers
