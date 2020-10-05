@@ -18,7 +18,8 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.insertOne([
-    "name", "devoured"
+    "burger_name", "devoured"
+    //might be an issue in this file
   ], [
     req.body.name, req.body.devoured
   ], function(result) {
