@@ -51,15 +51,15 @@ var orm = {
     });
   },
   insertOne: function(tablename, insertValues, cb) {
-    var sql = "INSERT INTO ?? SET ?";
+    var sql = "INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)";
 
-    var placeholder = [tablename, insertvalues];
-    connection.query(sql, placeholder, (error, results) => {
+    var placeholder = insertValues;
+    console.log(placeholder);
+    connection.query(sql, placeholder , (error, results) => {
       if (error) {
         console.log(error);
-        cb(error);
       }
-      cd(results);
+      cb(results);
     })
   },
   // An example of objColVals would be {name: panther, sleepy: true}

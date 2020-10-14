@@ -17,10 +17,8 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
+  console.log('reached router.post');
   burger.insertOne([
-    "burger_name", "devoured"
-    //might be an issue in this file
-  ], [
     req.body.name, req.body.devoured
   ], function(result) {
     // Send back the ID of the new quote
