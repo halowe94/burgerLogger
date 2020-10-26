@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         host: process.env.DATABASE_HOST,
 
         // 3306
-        port: 3306,
+        PORT: 3306,
 
         // Your username
         user: process.env.DATABASE_USERNAME,
